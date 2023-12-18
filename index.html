@@ -1,19 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/css/app.css">
-    <title>sasstest</title>
+    <title>Dom projet</title>
 </head>
+
 <body>
     <header>
-        
+        <nav class="navbar">
+            <a href="" class="logo">MOLENGEEK</a>
+            <div class="nav-links">
+                <ul>
+                    <li id="active" class="cool-link"><a href="#">HOME</a></li>
+                    <li class="cool-link"><a href="#">ABOUT</a></li>
+                    <li class="cool-link"><a href="#">SERVICE</a></li>
+
+                    <li class="dropdown">
+                        <a class="cool-link" href="#">DROPDOWN</a>
+                        <ul class="close">
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                            <li><a href="#">MAPS</a></li>
+                        </ul>
+
+                    </li>
+
+                    <li class="cool-link"><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            <button type="button"> Get Started </button>
+        </nav>
+
     </header>
 
 
+    <section class="current">
+        <div class="btn-container">
+            <button class="btn ia">AI</button>
+            <button class="btn dev">DEV</button>
+            <button class="btn ux">UI/UX</button>
+        </div>
+        <div class="container">
+            <div class="filtered-div" id="ai">
+                <div class="text">
+                    <p>DEV</p>
+                    <h2>DEVELOPPEMENT</h2>
+                </div>
+                <div class="contenant-filter">
+                    <div>
+                        <img src="" alt="">
+                        <h4>
+                            Adobe IA
+                        </h4>
+                    </div>
 
+                    <div>
+                        <img src="" alt="">
+                        <h4>
+                            ChatGPT
+                        </h4>
+                    </div>
 
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+                    <div>
+                        <img src="" alt="">
+                        <h4>
+                            Bard
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="filtered-div" id="dev">
+                <div class="text">
+                    <p>MENU</p>
+                    <h2>IA</h2>
+                </div>
+                <div class="contenant-filter">
+                    <div>
+                        <img src="" alt="">
+                        <h4>
+                            Visual Studio
+                        </h4>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                        <h4>
+                            Atom
+                        </h4>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                        <h4>
+                            PY Charm
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="filtered-div" id="ux">
+                <div class="text">
+                    <p>UI/UX</p>
+                    <h2>UI/UX</h2>
+                </div>
+                <div class="contenant-filter">
+                    <div>
+                        <img src="" alt="">
+                        <h4>
+                            Adobe XD
+                        </h4>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                        <h4>
+                            Figma
+                        </h4>
+                    </div>
+                    <div>
+                        <img src="" alt="">
+                        <h4>
+                            Uizard
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./public/js/main.js"></script>
 </body>
+
 </html>

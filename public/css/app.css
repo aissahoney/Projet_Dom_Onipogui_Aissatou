@@ -1,6 +1,7 @@
 header {
-  color: beige;
-  background-color: rgba(90, 105, 50, 0.2274509804);
+  color: white;
+  background: url("../../../public/img/hero-bg.jpg");
+  height: 50vh;
   width: 100vw;
   margin-top: 0;
   margin-right: 0;
@@ -10,26 +11,67 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100vw;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: red;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+nav button {
+  height: 3rem;
+  width: 5rem;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
 }
 nav ul li {
   list-style-type: none;
   color: green;
+  padding-left: 20px;
 }
 
-.dropdown {
-  display: flex;
-  flex-direction: column;
-  margin-top: 0;
+.close {
+  display: none;
 }
-.dropdown img {
+
+.open {
   position: absolute;
-  top: 0;
-  right: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-.dropdown ul li a {
+.open li a {
+  line-height: 2;
+  color: black;
+  text-align: center;
+}
+
+.cool-link {
+  display: inline-block;
+  color: white;
   text-decoration: none;
-  color: green;
+}
+
+.cool-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.2s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
 }
 
 * {
@@ -40,6 +82,38 @@ nav ul li {
 body {
   width: 100%;
   height: 100vh;
+}
+
+.current {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: space-evenly;
+  width: 100%;
+  height: 30vh;
+}
+.current .container {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.current .container #dev, .current .container #ai, .current .container #ux {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+  border: 1px solid grey;
+}
+
+.contenant-filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: pink;
 }
 
 /*# sourceMappingURL=app.css.map */
