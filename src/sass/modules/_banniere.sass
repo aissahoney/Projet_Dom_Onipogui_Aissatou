@@ -1,0 +1,63 @@
+header
+    color: white
+    display: flex
+    flex-direction: row
+    align-items: center
+    // width: 100vw
+    padding-top: 80px
+    // background-color: red
+
+    .start
+        width: 100vw
+        height: 100vh
+        display: flex
+        justify-content: space-around
+        align-items: center
+    
+    
+        .start-content
+            font-size: 25px
+            line-height: 2
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            width: 50%
+            // padding: 20px
+            // background: grey
+            img
+                width: 30vw
+                height: 30vw
+                animation-name: floating
+                animation-duration: 3s
+                animation-iteration-count: infinite
+                animation-timing-function: ease-in-out
+                
+// animation
+@keyframes floating
+    0%  
+        transform: translate(0,  0px)
+    50% 
+        transform: translate(0, 15px)
+    100% 
+        transform: translate(0, -0px)
+
+
+
+
+
+
+@media screen and (max-width:768px) 
+    header
+        flex-direction: column
+        .start
+            flex-direction: column-reverse
+            .start-content
+                justify-content: space-around
+                font-size: smaller
+                padding:0
+                img
+                    width: 100px
+                    height: 100px
+    
+    

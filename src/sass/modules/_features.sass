@@ -1,0 +1,61 @@
+.section4
+    width: 100%
+    background: white
+    display: flex
+    align-content: center
+    justify-content: center
+    flex-direction: column
+    padding: 50px
+
+    #section4-text
+        text-align: center
+        h1
+            text-decoration-line: underline #6A36E8
+            line-height: 2
+        
+    .feature-content
+        // background: blue
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        padding-top: 0
+        padding-left: 10vw
+        padding-right: 10vw
+        padding-bottom: 5vw
+        
+        line-height: 2
+        .img-f
+            padding-top: 30px
+            img
+                width: 40vw
+                height: 40vw
+
+        .feature-liste
+            padding: 10vh
+            line-height: 1.8
+            ul
+                li
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-between
+                    padding-bottom: 2vw
+                    gap: 10px
+
+
+.fa-sharp, .fa-solid, .fa-regular
+    font-size: 2rem
+    color: #6A36E8
+
+
+
+
+@media screen and (max-width: 768px)
+    .section4
+        font-size: 16px
+        .feature-content
+            flex-direction: column-reverse
+            .feature-liste
+                padding: 5vh
+                line-height: 1.3
+
