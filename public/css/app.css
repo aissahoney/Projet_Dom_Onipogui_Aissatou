@@ -10434,11 +10434,14 @@ nav {
 }
 nav a {
   text-decoration: none;
-  color: white;
 }
 nav button {
   height: 3rem;
-  width: 5rem;
+  width: 7rem;
+  color: white;
+  border: 1px solid rgba(223, 221, 230, 0.865);
+  border-radius: 4px;
+  background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%);
 }
 nav ul {
   display: flex;
@@ -10448,8 +10451,10 @@ nav ul {
 }
 nav ul li {
   list-style-type: none;
-  color: green;
   padding-left: 20px;
+}
+nav ul li a {
+  color: rgba(223, 221, 230, 0.865);
 }
 
 .close {
@@ -10472,7 +10477,7 @@ nav ul li {
 
 .cool-link {
   display: inline-block;
-  color: white;
+  color: rgba(223, 221, 230, 0.865);
   text-decoration: none;
 }
 
@@ -10569,19 +10574,53 @@ body {
 
 .grille {
   max-width: 1300px;
-  width: 80%;
+  width: 100%;
   height: auto;
   margin: 30px auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-columns: repeat(auto-fill, 400px);
   justify-content: center;
   grid-gap: 10px;
 }
 
 .grid-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   background: white;
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 300px;
+  line-height: 2;
+  text-align: center;
+  transition: all 0.1s ease;
+}
+.grid-item .fa-solid {
+  padding-bottom: 40px;
+}
+
+.fa-music {
+  color: #47AEFE !important;
+}
+
+.fa-gamepad {
+  color: rgb(255, 162, 106) !important;
+}
+
+.fa-stopwatch {
+  color: #E80168 !important;
+}
+
+.fa-laptop {
+  color: #FFBB2C !important;
+}
+
+.fa-building {
+  color: rgb(250, 77, 36) !important;
+}
+
+.fa-mug-hot {
+  color: #0EDBCE !important;
 }
 
 .section4 {
@@ -10695,6 +10734,66 @@ body {
   display: none;
 }
 
+.section7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: white;
+  text-align: center;
+  width: 100%;
+}
+.section7 .btn-change {
+  width: 60px;
+  height: 34px;
+  margin-top: 4%;
+  margin-right: 70%;
+}
+.section7 .product-container {
+  width: 100%;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5vw;
+  gap: 30px;
+}
+.section7 .product-container .product-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  width: 25vw;
+  height: 25vw;
+}
+.section7 .product-container .product-item .btnPrice {
+  height: 2rem;
+  width: 6rem;
+  color: white;
+  border-radius: 4px;
+  background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%);
+}
+.section7 .product-container .product-item .item-title {
+  background: #F9F8FE;
+  border-radius: 3px;
+  width: 100%;
+  height: 2rem;
+  text-align: center;
+  padding: 2vw;
+}
+.section7 .product-container .product-item .btn-div {
+  background: #F9F8FE;
+  border-radius: 3px;
+  width: 100%;
+  height: 2rem;
+  text-align: center;
+  padding: 3vw;
+}
+
 .section8 {
   display: flex;
   justify-content: center;
@@ -10743,6 +10842,10 @@ body {
   display: block;
 }
 
+.fa-chevron-up {
+  display: none;
+}
+
 .fa-regular {
   font-weight: lighter;
   font-size: 20px;
@@ -10750,6 +10853,61 @@ body {
 
 .fa-solid {
   font-size: 20px;
+}
+
+footer {
+  background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url(../../../public/img/footer-bg.jpg) center center no-repeat;
+  width: 100vw;
+}
+
+#scrollTop {
+  background-color: rgb(88, 70, 250);
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  color: #fff;
+  width: 1.8rem;
+  height: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.textFooter {
+  color: white;
+  list-style: none;
+  padding: 2.3%;
+}
+
+.logoAll {
+  margin-left: 5%;
+}
+
+.iconAll i {
+  font-size: 50%;
+  background-color: rgba(104, 83, 241, 0.5);
+  border-radius: 50%;
+  padding: 1%;
+  color: white;
+}
+
+@media only screen and (max-width: 425px) {
+  footer .row {
+    text-align: start;
+  }
+}
+@media only screen and (max-width: 768px) {
+  footer .row {
+    text-align: start;
+  }
+  footer .molenGeek {
+    padding-bottom: 5%;
+  }
+  footer .Ulinks {
+    padding-bottom: 5%;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
