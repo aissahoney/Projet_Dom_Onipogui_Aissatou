@@ -10593,34 +10593,34 @@ body {
   height: 300px;
   line-height: 2;
   text-align: center;
-  transition: all 0.1s ease;
+  transition: all 1s ease-in-out;
 }
 .grid-item .fa-solid {
   padding-bottom: 40px;
 }
 
 .fa-music {
-  color: #47AEFE !important;
+  color: #47AEFE;
 }
 
 .fa-gamepad {
-  color: rgb(255, 162, 106) !important;
+  color: rgb(255, 162, 106);
 }
 
 .fa-stopwatch {
-  color: #E80168 !important;
+  color: #E80168;
 }
 
 .fa-laptop {
-  color: #FFBB2C !important;
+  color: #FFBB2C;
 }
 
 .fa-building {
-  color: rgb(250, 77, 36) !important;
+  color: rgb(250, 77, 36);
 }
 
 .fa-mug-hot {
-  color: #0EDBCE !important;
+  color: #0EDBCE;
 }
 
 .section4 {
@@ -10687,7 +10687,7 @@ body {
   }
 }
 .section6 {
-  background: #EAE7ED;
+  background: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10771,9 +10771,11 @@ body {
   height: 25vw;
 }
 .section7 .product-container .product-item .btnPrice {
-  height: 2rem;
-  width: 6rem;
+  height: 2.5rem;
+  width: 7rem;
   color: white;
+  font-weight: bold;
+  border: none;
   border-radius: 4px;
   background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%);
 }
@@ -10784,6 +10786,7 @@ body {
   height: 2rem;
   text-align: center;
   padding: 2vw;
+  font-weight: bold;
 }
 .section7 .product-container .product-item .btn-div {
   background: #F9F8FE;
@@ -10791,7 +10794,9 @@ body {
   width: 100%;
   height: 2rem;
   text-align: center;
-  padding: 3vw;
+  align-items: center;
+  padding-bottom: 4vw;
+  padding-top: 1.5vw;
 }
 
 .section8 {
@@ -10801,6 +10806,7 @@ body {
   text-align: center;
   padding: 50px;
   color: white;
+  background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url(../../../public/img/footer-bg.jpg) contain no-repeat;
 }
 .section8 .accordeon {
   display: flex;
@@ -10815,7 +10821,7 @@ body {
 .section8 .accordeon div {
   background: white;
   border-radius: 4px;
-  padding: 2rem;
+  padding: 1rem;
 }
 .section8 .accordeon div .accordeonTitle {
   display: flex;
@@ -10855,52 +10861,165 @@ body {
   font-size: 20px;
 }
 
-footer {
-  background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url(../../../public/img/footer-bg.jpg) center center no-repeat;
-  width: 100vw;
-}
-
-#scrollTop {
-  background-color: rgb(88, 70, 250);
-  position: fixed;
-  bottom: 5%;
-  right: 2%;
-  color: #fff;
-  width: 1.8rem;
-  height: 1.8rem;
+.section5 {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: #EAE7ED;
+  padding: 50px;
+}
+
+.slider {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100%;
+  height: 400px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  z-index: 1;
+}
+
+.slides {
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 10000px;
+}
+
+.slides.shifting {
+  transition: left 0.2s ease-out;
+}
+
+.slide {
+  width: 500px;
+  height: 400px;
   cursor: pointer;
-  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 1s;
+  position: relative;
+  background: white;
+  border: 3px solid black;
+  border-radius: 2px;
+  gap: 60px;
+}
+.slide .dots i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: black;
+}
+.slide .dots {
+  background: white;
+}
+.control {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  margin-top: -20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
 }
 
-.textFooter {
+.prev,
+.next {
+  background-size: 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.prev {
+  background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronLeft-512.png);
+  left: 20px;
+}
+
+.next {
+  background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png);
+  right: 20px;
+}
+
+.prev:active,
+.next:active {
+  transform: scale(0.8);
+}
+
+.section10 {
+  height: 50vw;
+  background: grey;
+}
+
+footer {
+  background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url(../../../public/img/footer-bg.jpg) cover no-repeat;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
   color: white;
+}
+footer .row {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  border-bottom: 1px solid white;
+}
+footer .row .col ul li {
   list-style: none;
-  padding: 2.3%;
+  line-height: 2;
+}
+footer .row .col ul li i {
+  color: white;
+  font-size: small;
+  letter-spacing: 1rem;
+}
+footer .row .col1 {
+  padding-bottom: 3vw;
+}
+footer .row .col4 {
+  padding-bottom: 7vw;
 }
 
-.logoAll {
-  margin-left: 5%;
+.icon-footer {
+  position: absolute;
+  padding-top: 2vw;
+  margin-bottom: 2vw;
+  right: 85%;
 }
-
-.iconAll i {
-  font-size: 50%;
+.icon-footer i {
+  font-size: 1.5rem;
   background-color: rgba(104, 83, 241, 0.5);
   border-radius: 50%;
-  padding: 1%;
   color: white;
 }
 
 @media only screen and (max-width: 425px) {
   footer .row {
-    text-align: start;
+    flex-direction: column;
   }
 }
 @media only screen and (max-width: 768px) {
   footer .row {
     text-align: start;
+    flex-direction: column;
+    margin: 0;
   }
   footer .molenGeek {
     padding-bottom: 5%;
