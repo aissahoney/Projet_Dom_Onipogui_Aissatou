@@ -1,11 +1,12 @@
 footer
-    background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url(../../../public/img/footer-bg.jpg) cover  no-repeat
+    background: linear-gradient(45deg, rgba(87, 58, 250, 0.943) 0%, rgba(114, 15, 214, 0.971) 100%), url(../../../public/img/footer-bg.jpg) cover no-repeat
     width: 100vw
     display: flex
     flex-direction: column
+    flex-wrap: wrap
     align-items: center
     justify-content: space-between
-    padding: 60px
+    padding: 50px
     color: white
     .row
         width: 90vw
@@ -13,7 +14,7 @@ footer
         flex-direction: row
         align-items: center
         justify-content: space-between
-        padding-bottom:50px
+        padding-bottom: 50px
         border-bottom: 1px solid white
         .col
             ul
@@ -29,7 +30,6 @@ footer
             // background: red
         .col4
             padding-bottom: 7vw
-                
 
 .icon-footer
     position: absolute
@@ -41,32 +41,62 @@ footer
         background-color: rgba(104, 83, 241, 0.5)
         border-radius: 50%
         color: white
-        
 
 
-@media only screen and (max-width: 425px) 
-    footer
-        .row
-            // text-align: start
-            flex-direction: column
-        
-    
 
-@media only screen and (max-width: 768px) 
-    footer
-        .row
-            text-align: start
-            flex-direction: column
-            // flex-shrink: 
-            margin: 0
+.footer-form
+    overflow: hidden
+    display: flex
+    flex-direction: row
+
+    input
+        width: 100%
+        float: left
+        padding: 8px 10px
+        text-align: center
+        font-family: inherit
+        font-size: 1rem
+        letter-spacing: 0.05rem
+        outline: 0
+        &[type=email]
+            width: 70%
+            margin-top: 20px
+            border: 1px solid lighten(grey, 50%)
+            border-top-left-radius: 5px
+            border-bottom-left-radius: 5px
             
-            
-        
-        
-        .molenGeek
-            padding-bottom: 5%
-        
-        .Ulinks
-            padding-bottom: 5%
-        
+
+            // @media (min-width: 768px) {
+            //   margin-bottom: 0px;
+            //   width: 75%;
+            //   border-right-width: 0px;
+            // }
+
+        &[type=submit]
+            margin-top: 20px
+            width: 20%
+            background-color: rgba(110, 42, 227, 0.876)
+            color: white
+            border: none
+            border-top-right-radius: 5px
+            border-bottom-right-radius: 5px
+
+
+            // @media (min-width: 768px) {
+            //   width: 25%;
+            // }
+
+@media only screen and (min-width: 426px) and (max-width: 768px)
+    .col
+        width: 50%
+        margin-bottom: 30%
     
+            
+
+@media only screen and (max-width: 425px)
+    .row
+        text-align: start
+        flex-direction: column
+        margin: 0
+        .col2,.col3
+            display: none

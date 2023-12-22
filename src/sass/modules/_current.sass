@@ -1,17 +1,30 @@
 .section6
+    width: 100%
     background: white
     display: flex
     flex-direction: column
     align-items: center
     justify-items: space-evenly
     padding: 50px
-    
+
+    .btn-container
+        gap:4vw
+        padding: 3vw
+
+        .btn
+            height: 2rem
+            width: 2.5rem
+            background: transparent
+            border: none
+            border-bottom: 1px solid black
+
 
     .container
         width: 100%
         display: flex
         flex-direction: column
         justify-content: space-between
+        
         
         
         .filtered-div, .ia
@@ -21,6 +34,8 @@
             justify-content: space-between
             // background-color: pink
             text-align: center
+            gap: 2vw
+            
 
         .dev, .ux
             display: none
@@ -29,9 +44,14 @@
         width: 100%
         display: flex
         flex-direction: row
-        justify-content: space-evenly
+        justify-content: space-between
         align-items: center
+        paddind-bottom: 3vw
         div
+            display: flex
+            flex-direction: column
+            align-content: center
+            gap:10px
             img
                 width: 25vw
                 height: 20vw
@@ -46,4 +66,15 @@
 
 .remove 
     display: none
+.current-text
+    width: 100%
+    font-size: 25px
 
+@media screen and (max-width: 768px)
+    .section6
+        .contenant-filter
+            flex-direction: column
+            div
+                img
+                    width: 50vw
+                    height: 40vw

@@ -10,38 +10,84 @@
 </head>
 
 <body>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .toggle {
+            display: inline-block;
+            width: 80px;
+            height: 38px;
+            background-color: #8eeb60;
+            border-radius: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .toggle input[type="checkbox"] {
+            display: none;
+        }
+
+        .toggle-label {
+            display: block;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 34px;
+        }
+
+        .toggle-label:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            border-radius: 34px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.25s ease-in-out;
+        }
+
+        .toggle-checkbox:checked+.toggle-label:before {
+            transform: translateX(35px);
+        }
+    </style>
     <!-- nav---------------------------- -->
     <nav class="navbar">
         <a href="" class="logo">MOLENGEEK</a>
         <div class="nav-links">
             <ul>
-                <li id="active" class="cool-link"><a href="#">HOME</a></li>
-                <li class="cool-link"><a href="#">ABOUT</a></li>
-                <li class="cool-link"><a href="#">SERVICE</a></li>
+                <li id="active" class="cool-link"><a href="#text">HOME</a></li>
+                <li class="cool-link"><a href="#section1-text">ABOUT</a></li>
+                <li class="cool-link"><a href="#section3-text">SERVICE</a></li>
 
                 <li class="dropdown">
                     <a class="cool-link" href="#">DROPDOWN</a>
                     <ul class="close">
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                        <li><a href="#">MAPS</a></li>
+                        <li><a href="#section4-text">lien 1</a></li>
+                        <li><a href="#address">lien 2</a></li>
+                        <li><a href="#faq">lien 3</a></li>
                     </ul>
 
                 </li>
 
-                <li class="cool-link"><a href="#">CONTACT</a></li>
+                <li class="cool-link"><a href="#address">CONTACT</a></li>
             </ul>
         </div>
-        <button type="button"> Get Started </button>
+        <img src="./public/img/klipartz.com.png"  width="30vw" class="mode">
+        <button type="button" id="btn-nav"> Get Started </button>
+        <img src="./public/img/Daco_4295468.png" alt="logo menu" class="menu-burger">
+        
     </nav>
     <!---------------banniere------------------ -->
     <header>
         <div class="start">
-            <div class="start-content">
+            <div class="start-content" id="text">
                 <h1>
-                    Better Digital <br>Experience With <br>Coding School
+                    Better Digital Experience With Coding School
                 </h1>
-                <button type="button">Get Started</button>
+                <button class="bannier-btn" type="button">Get Started</button>
             </div>
             <div class="start-content">
                 <img src="./public/img/hero-img.png" alt="">
@@ -83,20 +129,19 @@
     <!-- numbers/section2------------------------ -->
     <section class="section2">
         <div>
-
-            <h3>232</h3>
+            <h2>232</h2>
             <p>Clients</p>
         </div>
         <div>
-            <h3>521</h3>
+            <h2>521</h2>
             <p>Projects</p>
         </div>
         <div>
-            <h3>1463</h3>
+            <h2>1463</h2>
             <p>Hours Of Supports</p>
         </div>
         <div>
-            <h3>15</h3>
+            <h2>15</h2>
             <p>Hard Workers</p>
         </div>
     </section>
@@ -104,6 +149,7 @@
     <section class="section3">
         <div id="section3-text">
             <h1>SERVICE</h1>
+            <div class="botton-line"></div>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet cumque suscipit ipsam.
             </p>
         </div>
@@ -149,6 +195,7 @@
     <section class="section4">
         <div id="section4-text">
             <h1>FEATURES</h1>
+            <div class="botton-line"></div>
             <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eu quidem. Sit sint
                 consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui
                 impedit suscipit alias ea. Quia fugiat sit in iste officis commodi quidem hic quas.
@@ -159,21 +206,21 @@
             <div class="feature-liste">
                 <ul>
                     <li>
-                        <i class="fa-regular fa-newspaper"></i>
+                        <i class="fa-regular fa-newspaper fa-feature"></i>
                         <div>
                             <p>Est labore ad</p>
                             <p>aConsequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
                         </div>
                     </li>
                     <li>
-                        <i class="fa-solid fa-cube"></i>
+                        <i class="fa-solid fa-cube fa-feature"></i>
                         <div>
                             <p>Harum esse qui</p>
                             <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
                         </div>
                     </li>
                     <li>
-                        <i class="fa-solid fa-images"></i>
+                        <i class="fa-solid fa-images fa-feature"></i>
                         <div>
                             <p>Autoccaecati</p>
                             <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
@@ -181,7 +228,7 @@
 
                     </li>
                     <li>
-                        <i class="fa-solid fa-shield"></i>
+                        <i class="fa-solid fa-shield fa-feature"></i>
                         <div>
                             <p>Beatae veritatis</p>
                             <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
@@ -197,38 +244,133 @@
     </section>
     <!-- ---------------testimonial/section5----------------- -->
     <section class="section5">
-    <div id="section5-text">
-        <h1>TESTIMONIALS</h1>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eu quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui
-            impedit suscipit alias ea. Quia fugiat sit in iste officis commodi quidem hic quas.
-        </p>
-    </div>
-    <div id="slider" class="slider">
+        <div id="section5-text">
+            <h1>TESTIMONIALS</h1>
+            <div class="botton-line"></div>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eu quidem. Sit sint
+                consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui
+                impedit suscipit alias ea. Quia fugiat sit in iste officis commodi quidem hic quas.
+            </p>
+        </div>
+        <div id="slider" class="slider">
 
-        <div class="wrapper">
-            <div id="slides" class="slides">
-                <span class="slide">Slide 1</span>
-                <span class="slide">Slide 2</span>
-                <span class="slide">Slide 3</span>
-                <span class="slide">Slide 4</span>
-                <span class="slide">Slide 5</span>
-                <span class="slide">Slide 6</span>
-                <span class="slide">Slide 7</span>
-                <span class="slide">Slide 8</span>
-                <span class="slide">Slide 9</span>
+            <div class="wrapper">
+                <div id="slides" class="slides">
+                    <span class="slide">
+                        <div>
+                            <p><i class="fa-solid fa-quote-left text-warning icone_section5"></i> Export tempor illum
+                                tamen malis malis
+                                eram quae irure esse labore quem cillum quid
+                                cillum eram malis quorum velit fore eram velit
+                                sunt aliqua noster fugiat irure amet legam
+                                anim culpa. <i
+                                    class="fa-solid fa-quote-left fa-flip-both text-warning icone_section5"></i></p>
+                        </div>
+                        <div class="icon-testimonials">
+                            <img src="./public/img/5907.png" alt="">
+                            <p><b>Saul Goodman</b></p>
+                            <p>Ceo & Founder</p>
+                        </div>
+                    </span>
+                    <span class="slide">
+                        <div>
+                            <p><i class="fa-solid fa-quote-left text-warning icone_section5"></i> Enim nisi quem export
+                                duis labore cillum
+                                quae magna enim sint quorum nulla quem
+                                veniam duis minim tempor labore quem eram
+                                duis noster aute amet eram fore quis sint
+                                minim. <i class="fa-solid fa-quote-left fa-flip-both text-warning icone_section5"></i>
+                            </p>
+                        </div>
+                        <div class="icon-testimonials">
+                            <img src="./public/img/5907.png" alt="">
+                            <p><b>Jena Karlis
+                                </b></p>
+                            <p>Store Owner</p>
+                        </div>
+                    </span>
+                    <span class="slide">
+                        <div>
+                            <p><i class="fa-solid fa-quote-left text-warning icone_section5"></i>Fugiat enim eram auae
+                                cillum dolore dolor
+                                amet nulla culpa multos export minim fugiat
+                                minim velit minim dolor enim duis veniam
+                                ipsum anim magna sunt elit fore quem dolore
+                                labore. <i class="fa-solid fa-quote-left fa-flip-both text-warning icone_section5"></i>
+                            </p>
+                        </div>
+                        <div class="icon-testimonials">
+                            <img src="./public/img/5907.png" alt="">
+                            <p><b>Matt Brandon
+                                </b></p>
+                            <p>Freelancer</p>
+                        </div>
+                    </span>
+                    <span class="slide">
+                        <div>
+                            <p><i class="fa-solid fa-quote-left text-warning icone_section5"></i> Export tempor illum
+                                tamen malis malis
+                                eram quae irure esse labore quem cillum quid
+                                cillum eram malis quorum velit fore eram velit
+                                sunt aliqua noster fugiat irure amet legam
+                                anim culpa. <i
+                                    class="fa-solid fa-quote-left fa-flip-both text-warning icone_section5"></i></p>
+                        </div>
+                        <div class="icon-testimonials">
+                            <img src="./public/img/5907.png" alt="">
+                            <p><b>John Larson
+                                </b></p>
+                            <p>Entrepreneur</p>
+                        </div>
+                    </span>
+                    <span class="slide">
+                        <div>
+                            <p><i class="fa-solid fa-quote-left text-warning icone_section5"></i> Enim nisi quem export
+                                duis labore cillum
+                                quae magna enim sint quorum nulla quem
+                                veniam duis minim tempor labore quem eram
+                                duis noster aute amet eram fore quis sint
+                                minim. <i class="fa-solid fa-quote-left fa-flip-both text-warning icone_section5"></i>
+                            </p>
+                        </div>
+                        <div class="icon-testimonials">
+                            <img src="./public/img/5907.png" alt="">
+                            <p><b>Saul Goodman</b></p>
+                            <p>Ceo & Founder</p>
+                        </div>
+                    </span>
+                    <span class="slide">
+                        <div>
+                            <p><i class="fa-solid fa-quote-left text-warning icone_section5"></i> Fugiat enim eram auae
+                                cillum dolore dolor
+                                amet nulla culpa multos export minim fugiat
+                                minim velit minim dolor enim duis veniam
+                                ipsum anim magna sunt elit fore quem dolore
+                                labore. <i class="fa-solid fa-quote-left fa-flip-both text-warning icone_section5"></i>
+                            </p>
+                        </div>
+                        <div class="icon-testimonials">
+                            <img src="./public/img/5907.png" alt="">
+                            <p><b>Sara Wilsson</b></p>
+                            <p>Designer</p>
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <!-- <div class="btn-div"> -->
+            <a id="prev" class="control prev"><i class="fa-solid fa-chevron-left"
+                    style="font-size: small; text-align: center;"></i></a>
+            <a id="next" class="control next"><i class="fa-solid fa-chevron-right" style="font-size: small"></i></a>
+            <!-- </div> -->
+            <div class="dots">
             </div>
         </div>
-
-        <a id="prev" class="control prev"></a>
-        <a id="next" class="control next"></a>
-        <div class="dots">
-
-        </div>
-    </div>
-</section>
+    </section>
     <!-- ---------------current/section6----------------- -->
     <section class="section6">
+        <div class="current-text">
+            <h1>Current Tech</h1>
+        </div>
         <div class="btn-container">
             <button class="btn ai-btn">AI</button>
             <button class="btn dev-btn">DEV</button>
@@ -318,17 +460,23 @@
             </div>
         </div>
     </section>
-    <!-- ---------------section7---------------- -->
+    <!-- ---------------pricing/section7---------------- -->
     <section class="section7">
         <div class="title-container">
-            <h2> Princing</h2>
+            <h2> PRICING</h2>
+            <div class="botton-line"></div>
             <p> Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
                 sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
                 ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
         <div class="btn-change">
-            <p>Month</p>
-            <p>Year</p>
+            <!-- <div id="btnPrinAll"> -->
+                    <p id="p1">Month</p>
+                    <div class="grand-rond">
+                        <div class="boule"></div>
+                    </div>
+                    <p id="p2">Year</p>
+             <!-- </div> -->
         </div>
         <div class="product-container">
             <div class="product-item">
@@ -336,7 +484,7 @@
                     <p>Free</p>
                 </div>
                 <p>
-                <p><sup>$</sup><span> 0 </span> <span class="mois">/month</span></p>
+                <p><sup>$</sup><span class=price> 0 </span> <span class="month">/month</span></p>
                 <p>Aida dere</p>
                 <p>Nec feugiat nist</p>
                 <p>Nulla at volutpat dola</p>
@@ -351,7 +499,7 @@
                 <div class="item-title">
                     <p>Business</p>
                 </div>
-                <p> <sup>$</sup><span> 19 </span><span>/month</span></p>
+                <p> <sup>$</sup><span class=price> 19 </span><span class="month">/month</span></p>
                 <p>Aida dere</p>
                 <p>Nec feugiat nist</p>
                 <p>Nulla at volutpat dola</p>
@@ -365,7 +513,7 @@
                 <div class="item-title">
                     <p>Developer</p>
                 </div>
-                <p> <sup>$</sup> <span> 29</span> <span>/month</span></p>
+                <p> <sup>$</sup> <span class=price> 29</span> <span class="month">/month</span></p>
                 <p>Aida dere</p>
                 <p>Nec feugiat nist</p>
                 <p>Nulla at volutpat dola</p>
@@ -381,7 +529,7 @@
                 <div class="item-title">
                     <p>Ultimate</p>
                 </div>
-                <p> <sup>$</sup> <span>49</span> <span>/month</span></p>
+                <p> <sup>$</sup> <span class=price>49</span> <span class="month">/month</span></p>
                 <p>Aida dere</p>
                 <p>Nec feugiat nist</p>
                 <p>Nulla at volutpat dola</p>
@@ -395,7 +543,8 @@
     </section>
     <!-------------------faqs/section8------------------- -->
     <section class="section8">
-        <h2>F.A.Q</h2>
+        <h2 id="faq">F.A.Q</h2>
+        <div class="botton-line"></div>
         <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
             consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui
             impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
@@ -467,10 +616,54 @@
                 </div>
             </div>
     </section>
-
-
+    <!-- --------------------contact-------------------------------------- -->
     <section class="section10">
-
+        <h2>CONTACT</h2>
+        <div class="botton-line"></div>
+        <p>
+            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui <br>
+            impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
+        </p>
+        <div class="container-contact">
+            <div class="contact-part1">
+                <div class="part1" id="address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h2>Adresse</h2>
+                    <p class="min">Place de la Minoterie 10</p>
+                </div>
+                <div class="part1">
+                    <i class="fa-regular fa-envelope"></i>
+                    <h2>Email</h2>
+                    <p class="min">info@exemple.com</p>
+                </div>
+                <div class="part1">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <h2>Phone</h2>
+                    <p class="min">+ 1 234 567 890</p>
+                </div>
+            </div>
+            <div class="contact-part2">
+                <div class="part2" id="part2-maps">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.6877148420904!2d4.341362200000001!3d50.855466899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c38e84af80dd%3A0xe85cd9cd0218a4aa!2sPl.%20de%20la%20Minoterie%2010%2C%201080%20Molenbeek-Saint-Jean!5e0!3m2!1sfr!2sbe!4v1699355242567!5m2!1sfr!2sbe"></iframe>
+                </div>
+                <div class="part2">
+                    <form>
+                        <div class="contact-inputs">
+                            <input type="text" name="Your Name" id="name" placeholder="Your Name">
+                            <input type="email" name="email" id="email" placeholder="Your Email">
+                        </div>
+                        <div class="contact-message">
+                            <input type="text" name="subject" id="subject" placeholder="Subject">
+                            <textarea name="message" id="message">message</textarea>
+                            <button type="submit" id="contact-btn">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
     </section>
 
     <!-- ------------------------footer----------------------------------- -->
@@ -485,7 +678,7 @@
             </div>
 
 
-            <div class="col">
+            <div class="col col2">
                 <h5 class="">Useful Links</h5>
                 <ul class="">
                     <li> <i class="fa-solid fa-chevron-right"></i> Home</a></li>
@@ -497,7 +690,7 @@
             </div>
 
 
-            <div class="col ">
+            <div class="col col3 ">
                 <h5>Our Services</h5>
                 <ul>
                     <li> <i class="fa-solid fa-chevron-right"></i> Web Design</a></li>
@@ -510,13 +703,11 @@
 
 
             <div class="col col4">
-                <form action="">
-                    <h5 class=""> Join Our newsletter </h5>
-                    <p>Tamen quem nulla quae legam multos auto sint culpa legam noster magna</p>
-                    <div class="">
-                        <input type="text" class="inputFooter">
-                        <button type="submit" class="btnFooter text-light">Subscribe</button>
-                    </div>
+                <h5 class=""> Join Our newsletter </h5>
+                <p>Tamen quem nulla quae legam multos auto sint culpa legam noster magna</p>
+                <form class="footer-form">
+                    <input type="email" placeholder="Your email address">
+                    <input type="submit" value="Subscribe">
                 </form>
             </div>
         </div>
@@ -536,7 +727,6 @@
     </footer>
 
     <script src="./public/js/main.js"></script>
-
 </body>
 
 </html>

@@ -1,4 +1,5 @@
 .section1
+    width: 100%
     background: white
     display: flex
     flex-direction: row
@@ -15,14 +16,31 @@
             display: flex
             flex-direction: column
             align-items: center
-            max-width: 50%
-            padding: 10vw
+            height: 50%
+            padding: vw
             line-height: 2
             img
                 width: 45vw
                 height: 30vw
 
 
-@media screen and (max-width:768px)
+@media screen  and (max-width: 768px)
     .section1
             flex-direction: column-reverse
+    .start-content
+        font-size: 15px
+        width: 100%
+        padding: 0
+        flex-direction: row
+        img
+            width: 30vw
+            height: 20vw
+
+// @media only screen and (max-width: 425px)
+//     .section1
+//             flex-direction: column-reverse
+//     .start-content
+//         font-size: smaller
+//         width: 100%
+//     #section1-text
+//         padding: 0

@@ -4,29 +4,51 @@
     justify-content: center
     align-items: center
     padding: 50px
-    background-color: white
+    background-color: #EAE7ED
     text-align: center
-    // height: 30vw
     width: 100%
     .btn-change
-        width: 60px
-        height: 34px
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        gap: 3px
         margin-top:4%
         margin-right:70%
+    .grand-rond
+        background: rgba(86, 58, 250, 0.9)
+        border-radius: 25px
+        width: 6rem
+        height: 2rem
+        .boule
+            position: absolute
+            background: white
+            border-radius: 50%
+            width: 2rem
+            height: 2rem
 
+        
+    .botton-line
+        margin-left: 47%
+        margin-bottom: 5%
+        margin-top: 2%
+        border: 1.5px solid rgba(86, 58, 250, 0.9)
+        width: 5vw
 
 
     .product-container
-        width: 100%
+        width: 100vw
         // border: 3px solid grey
         display: flex
         flex-direction: center
         align-items: center
         justify-content: space-between
         padding: 5vw
+        padding-top: 5vw
         gap: 30px
         
         .product-item
+            // position: sticky
             display: flex
             align-items: center
             flex-direction: column
@@ -63,5 +85,20 @@
                 padding-bottom: 4vw
                 padding-top: 1.5vw
 
-        
-    
+
+@media screen and (max-width: 425px)
+    .product-container
+        flex-direction: column
+        height: 100vw
+        padding: 10vw
+@media screen and (max-width: 425px)
+    .product-item
+        width: 70vw
+        height: 70vw
+        .btn-div
+            padding:0
+        .btnPrice
+            height: 2rem
+            width: 4rem
+
+
