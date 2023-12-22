@@ -10,49 +10,6 @@
 </head>
 
 <body>
-    <style>
-        body {
-            text-align: center;
-        }
-
-        .toggle {
-            display: inline-block;
-            width: 80px;
-            height: 38px;
-            background-color: #8eeb60;
-            border-radius: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .toggle input[type="checkbox"] {
-            display: none;
-        }
-
-        .toggle-label {
-            display: block;
-            overflow: hidden;
-            cursor: pointer;
-            border-radius: 34px;
-        }
-
-        .toggle-label:before {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 100%;
-            background-color: red;
-            border-radius: 34px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            transition: all 0.25s ease-in-out;
-        }
-
-        .toggle-checkbox:checked+.toggle-label:before {
-            transform: translateX(35px);
-        }
-    </style>
     <!-- nav---------------------------- -->
     <nav class="navbar">
         <a href="" class="logo">MOLENGEEK</a>
