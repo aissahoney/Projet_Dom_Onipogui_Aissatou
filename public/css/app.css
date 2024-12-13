@@ -11050,8 +11050,8 @@ body {
   font-weight: lighter;
   font-size: 20px;
 }
-.section8 .accordeon div .accordeonTitle .fa-solid {
-  font-size: 20px;
+.section8 .accordeon div .accordeonTitle .uil-angle-down {
+  font-size: 2rem;
   color: rgba(86, 58, 250, 0.9);
 }
 
