@@ -33,43 +33,43 @@ let nav=document.querySelector(".navbar")
 
 
 
-let lightMode=document.querySelector(".mode")
-lightMode.addEventListener("click", function() {
-    lightMode.classList.toggle(".mode")
+// let lightMode=document.querySelector(".mode")
+// lightMode.addEventListener("click", function() {
+//     lightMode.classList.toggle(".mode")
     
-    body.style.background=" rgba(19, 18, 29, 0.9)"
-    body.style.color="white"
-    nav.style.color="rgba(87, 58, 250, 0.966)"
+//     body.style.background=" rgba(19, 18, 29, 0.9)"
+//     body.style.color="white"
+//     nav.style.color="rgba(87, 58, 250, 0.966)"
 
-    section.forEach(element => {
-        element.style.background=" rgba(19, 18, 29, 0.9)"
+//     section.forEach(element => {
+//         element.style.background=" rgba(19, 18, 29, 0.9)"
         
-    });
-    h1.forEach(element => {
-        element.style.color="white"
-    });
-    h2.forEach(element => {
-        element.style.color="white"
-    });
-    h3.forEach(element => {
-        element.style.color="white"
-    });
-    h4.forEach(element => {
-        element.style.color="white"
-    });
-    h5.forEach(element => {
-        element.style.color="white"
-    });
+//     });
+//     h1.forEach(element => {
+//         element.style.color="white"
+//     });
+//     h2.forEach(element => {
+//         element.style.color="white"
+//     });
+//     h3.forEach(element => {
+//         element.style.color="white"
+//     });
+//     h4.forEach(element => {
+//         element.style.color="white"
+//     });
+//     h5.forEach(element => {
+//         element.style.color="white"
+//     });
     
-    p.forEach(element => {
-        element.style.white="white"
-    });
-    li.forEach(element => {
-        element.style.white="white"
-    });
+//     p.forEach(element => {
+//         element.style.white="white"
+//     });
+//     li.forEach(element => {
+//         element.style.white="white"
+//     });
 
 
-})
+// })
 
 
 
